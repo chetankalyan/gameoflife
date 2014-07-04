@@ -1,17 +1,15 @@
 package com.fk.gameoflife;
 
 public class World {
-    private String seedPattern;
 
-    public World(String seedPattern) {
-        this.seedPattern = seedPattern;
+    public World(String[] seedPattern) {
     }
 
     public void tick() {
 
     }
 
-    public String getPattern() {
+    public String[] getPattern() {
         return null;
     }
 }
