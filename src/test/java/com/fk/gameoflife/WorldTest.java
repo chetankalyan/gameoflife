@@ -2,7 +2,8 @@ package com.fk.gameoflife;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class WorldTest {
 
@@ -14,9 +15,6 @@ public class WorldTest {
                 "..*..",
                 "..*..",
                 "....."});
-        assertEquals(".....\n" +
-                "..*..\n" +
-                "..*..\n" +
-                "..*..\n" +
-                ".....\n", world.toString());
+        assertTrue(world.isAliveAt(2, 2));
+        assertFalse(world.isAliveAt(2, 4));
     }}
