@@ -2,7 +2,7 @@
 
 Game of life is a simulation of cellular automaton life, based on few simple rules
 
-The World in game of life consists of a grid of cells. Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent.
+The World in game of life consists of a grid of cells. Every cell interacts with its eight or fewer neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent.
 
 #### Rules
 
