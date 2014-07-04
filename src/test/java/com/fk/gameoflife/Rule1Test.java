@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class GameOfLifeRuleTest {
+public class Rule1Test {
     @Test
     public void testUnderpopulationRule(){
         World world = new World(new String[]{
