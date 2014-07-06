@@ -11,7 +11,7 @@ public class World {
 
     }
 
-    public String[] getPattern() {
+    public String getPattern() {
         return null;
     }
 
