@@ -1,5 +1,7 @@
 package com.fk.gameoflife;
 
+import java.util.List;
+
 public class World {
 
     private boolean[][] cells;
@@ -27,5 +29,9 @@ public class World {
 
     public boolean isAliveAt(int x, int y) {
         return cells[x][y];
+    }
+
+    public List<Object> getNeighbours(int x, int y) {
+        return null;
     }
 }
