@@ -15,19 +15,19 @@ public class GameOfLifeTest {
                 "....."});
         // T = 1
         world.tick();
-        assertEquals(new String[]{
-                ".....",
-                ".....",
-                ".***.",
-                ".....",
-                "....."}, world.getPattern());
+        assertEquals(
+                ".....\n"+
+                ".....\n"+
+                ".***.\n"+
+                ".....\n"+
+                ".....\n", world.getPattern());
         // T = 2
         world.tick();
-        assertEquals(new String[]{
-                ".....",
-                "..*..",
-                "..*..",
-                "..*..",
-                "....."}, world.getPattern());
+        assertEquals(
+                ".....\n"+
+                "..*..\n"+
+                "..*..\n"+
+                "..*..\n"+
+                ".....\n", world.getPattern());
     }
 }
