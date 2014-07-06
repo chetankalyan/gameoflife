@@ -10,6 +10,16 @@ public class LiveCell extends Cell {
     }
 
     @Override
+    public Cell getNextGeneration(World world)  {
+        int aliveNeighbourCount = getAliveNeighbourCount(world);
+        if(aliveNeighbourCount < 2) {
+            return new DeadCell(location);
+        } else {
+            return this;
+        }
+    }
+
+    @Override
     public String toString() {
         return "*";
     }

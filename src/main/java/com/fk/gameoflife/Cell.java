@@ -33,4 +33,6 @@ public abstract class Cell {
         }
         return count;
     }
+
+    public abstract Cell getNextGeneration(World world);
 }

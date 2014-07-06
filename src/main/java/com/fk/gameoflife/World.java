@@ -25,7 +25,14 @@ public class World {
     }
 
     public void tick() {
-
+        Cell[][] nextCells = new Cell[maxRow][maxCol];
+        for(int i=0; i<maxRow; i++){
+            for(int j=0; j<maxCol; j++){
+                Cell cell = this.cells[i][j];
+                nextCells[i][j] = cell.getNextGeneration(this);
+            }
+        }
+        this.cells = nextCells;
     }
 
     public String[] getPattern() {

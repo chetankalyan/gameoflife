@@ -10,6 +10,11 @@ public class DeadCell extends Cell {
     }
 
     @Override
+    public Cell getNextGeneration(World world) {
+        return null;
+    }
+
+    @Override
     public String toString() {
         return ".";
     }
