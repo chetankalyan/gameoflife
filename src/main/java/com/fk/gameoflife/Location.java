@@ -59,4 +59,8 @@ public class Location {
     private Location bottomRight() {
         return new Location(x+1,y+1);
     }
+
+    public boolean within(int maxRow, int maxCol) {
+        return x >= 0 && x < maxRow && y >= 0 && y < maxCol;
+    }
 }

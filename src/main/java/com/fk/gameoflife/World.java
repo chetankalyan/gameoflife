@@ -44,4 +44,12 @@ public class World {
     public Cell getCellAt(int x, int y) {
         return cells[x][y];
     }
+
+    public int getMaxRow() {
+        return maxRow;
+    }
+
+    public int getMaxCol() {
+        return maxCol;
+    }
 }

@@ -49,7 +49,7 @@ public class WorldTest {
                 "*.*",
                 ".*.",
                 "*.*"});
-        List<Object> neighbours = world.getNeighbours(1, 0);
+        List<Cell> neighbours = world.getNeighbours(1, 0);
         assertEquals(5, neighbours.size());
         // Neighbours from left to right, top to bottom
         assertEquals("*", neighbours.get(0).toString());
@@ -65,7 +65,7 @@ public class WorldTest {
                 "*.*",
                 ".*.",
                 "*.*"});
-        List<Object> neighbours = world.getNeighbours(2, 0);
+        List<Cell> neighbours = world.getNeighbours(2, 0);
         assertEquals(3, neighbours.size());
         // Neighbours from left to right, top to bottom
         assertEquals(".", neighbours.get(0).toString());

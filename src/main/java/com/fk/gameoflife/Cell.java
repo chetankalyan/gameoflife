@@ -16,7 +16,9 @@ public abstract class Cell {
         List<Location> neighbourLocations = this.location.getNeighbourLocations();
         ArrayList<Cell> neighbours = new ArrayList<Cell>();
         for (Location location : neighbourLocations) {
-            neighbours.add(world.getCellAt(location.getX(), location.getY()));
+            if(location.within(world.getMaxRow(), world.getMaxCol())){
+                neighbours.add(world.getCellAt(location.getX(), location.getY()));
+            }
         }
         return neighbours;
     }
