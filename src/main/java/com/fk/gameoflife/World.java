@@ -12,8 +12,4 @@ public class World {
     public String[] getPattern() {
         return null;
     }
-
-    public boolean isAliveAt(int x, int y) {
-        return false;
-    }
 }
