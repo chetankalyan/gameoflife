@@ -22,4 +22,8 @@ public class World {
     public List<Object> getNeighbours(int x, int y) {
         return null;
     }
+
+    public int getAliveNeighbourCount(int x, int y) {
+        return 0;
+    }
 }

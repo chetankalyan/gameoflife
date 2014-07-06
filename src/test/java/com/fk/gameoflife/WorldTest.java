@@ -41,6 +41,8 @@ public class WorldTest {
         assertEquals(".", neighbours.get(5).toString());
         assertEquals("*", neighbours.get(6).toString());
         assertEquals(".", neighbours.get(7).toString());
+        // Alive neighbour count
+        assertEquals(2, world.getAliveNeighbourCount(2,2));
     }
 
     @Test
@@ -57,6 +59,8 @@ public class WorldTest {
         assertEquals("*", neighbours.get(2).toString());
         assertEquals("*", neighbours.get(3).toString());
         assertEquals(".", neighbours.get(4).toString());
+        // Alive neighbour count
+        assertEquals(3, world.getAliveNeighbourCount(1,0));
     }
 
     @Test
@@ -71,5 +75,7 @@ public class WorldTest {
         assertEquals(".", neighbours.get(0).toString());
         assertEquals("*", neighbours.get(1).toString());
         assertEquals(".", neighbours.get(2).toString());
+        // Alive neighbour count
+        assertEquals(1, world.getAliveNeighbourCount(2,0));
     }
 }
