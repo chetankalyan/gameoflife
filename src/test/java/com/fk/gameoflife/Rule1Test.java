@@ -5,17 +5,18 @@ import org.junit.Test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class WorldTest {
-
+public class Rule1Test {
     @Test
-    public void testCreate(){
+    public void testUnderpopulationRule(){
         World world = new World(new String[]{
                 ".....",
                 "..*..",
                 "..*..",
                 "..*..",
                 "....."});
-        assertTrue(world.isAliveAt(2, 2));
-        assertFalse(world.isAliveAt(2, 4));
+        // T = 1
+        assertTrue(world.isAliveAt(1,2));
+        world.tick();
+        assertFalse(world.isAliveAt(1, 2));
     }
 }
