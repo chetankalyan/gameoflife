@@ -52,4 +52,8 @@ public class World {
     public int getMaxCol() {
         return maxCol;
     }
+
+    public int getAliveNeighbourCount(int x, int y) {
+        return 0;
+    }
 }
