@@ -54,6 +54,7 @@ public class World {
     }
 
     public int getAliveNeighbourCount(int x, int y) {
-        return 0;
+        Cell cell = this.cells[x][y];
+        return cell.getAliveNeighbourCount(this);
     }
 }

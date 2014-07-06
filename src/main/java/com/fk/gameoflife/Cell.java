@@ -22,4 +22,15 @@ public abstract class Cell {
         }
         return neighbours;
     }
+
+    public int getAliveNeighbourCount(World world) {
+        List<Cell> neighbours = getNeighbours(world);
+        int count = 0;
+        for (Cell cell : neighbours) {
+            if(cell.isAlive()){
+                count++;
+            }
+        }
+        return count;
+    }
 }
