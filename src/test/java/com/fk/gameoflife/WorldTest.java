@@ -30,7 +30,7 @@ public class WorldTest {
                 "..*..",
                 "..*..",
                 "....."});
-        List<Object> neighbours = world.getNeighbours(2, 2);
+        List<Cell> neighbours = world.getNeighbours(2, 2);
         assertEquals(8, neighbours.size());
         // Neighbours from left to right, top to bottom
         assertEquals(".", neighbours.get(0).toString());

@@ -1,5 +1,23 @@
 package com.fk.gameoflife;
 
-public interface Cell {
-    public boolean isAlive();
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class Cell {
+    protected Location location;
+
+    protected Cell(Location location) {
+        this.location = location;
+    }
+
+    public abstract boolean isAlive();
+
+    public List<Cell> getNeighbours(World world) {
+        List<Location> neighbourLocations = this.location.getNeighbourLocations();
+        ArrayList<Cell> neighbours = new ArrayList<Cell>();
+        for (Location location : neighbourLocations) {
+            neighbours.add(world.getCellAt(location.getX(), location.getY()));
+        }
+        return neighbours;
+    }
 }

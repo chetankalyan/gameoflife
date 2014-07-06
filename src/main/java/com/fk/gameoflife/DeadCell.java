@@ -1,6 +1,10 @@
 package com.fk.gameoflife;
 
-public class DeadCell implements Cell {
+public class DeadCell extends Cell {
+    protected DeadCell(Location location) {
+        super(location);
+    }
+
     public boolean isAlive() {
         return false;
     }
