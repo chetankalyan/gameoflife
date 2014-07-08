@@ -7,7 +7,6 @@ import static org.junit.Assert.assertEquals;
 
 public class GameOfLifeTest {
     @Test
-    @Ignore
     public void testOscillatorPattern(){
         World world = new World(new String[]{
                 ".....",
