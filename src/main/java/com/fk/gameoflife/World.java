@@ -35,7 +35,7 @@ public class World {
         this.cells = nextCells;
     }
 
-    public String[] getPattern() {
+    public String getPattern() {
         return null;
     }
 
