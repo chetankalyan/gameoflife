@@ -1,9 +1,10 @@
 package com.fk.gameoflife;
 
 /**
- * Create your version of a world based on the seed pattern passed into the class.
+ * World was created using a seed pattern before.
+ * Now world needs to implement the GameWorld interface.
  */
-public class World {
+public class World implements GameWorld {
 
     public World(String[] seedPattern) {
     }
