@@ -9,7 +9,7 @@ public interface GameWorld<T> {
     /**
      * On tick, the world goes through one generation.
      */
-    void tick();
+    void tick() throws Exception;
 
     /**
      * Invoked before and after a tick.
