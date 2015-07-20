@@ -48,6 +48,36 @@ public class WorldTest {
     }
 
     @Test
+    public void testGetNeighboursOfCellInEdge(){
+        World world = new World(new String[]{
+                "*.*",
+                ".*.",
+                "*.*"});
+        List<Object> neighbours = world.getNeighbours(1, 0);
+        assertEquals(5, neighbours.size());
+        // Neighbours from left to right, top to bottom
+        assertEquals("*", neighbours.get(0).toString());
+        assertEquals(".", neighbours.get(1).toString());
+        assertEquals("*", neighbours.get(2).toString());
+        assertEquals("*", neighbours.get(3).toString());
+        assertEquals(".", neighbours.get(4).toString());
+    }
+
+    @Test
+    public void testGetNeighboursOfCellInCorner(){
+        World world = new World(new String[]{
+                "*.*",
+                ".*.",
+                "*.*"});
+        List<Object> neighbours = world.getNeighbours(2, 0);
+        assertEquals(3, neighbours.size());
+        // Neighbours from left to right, top to bottom
+        assertEquals(".", neighbours.get(0).toString());
+        assertEquals("*", neighbours.get(1).toString());
+        assertEquals(".", neighbours.get(2).toString());
+    }
+
+    @Test
     public void testTick() {
         assertNotNull(world);
         try {
