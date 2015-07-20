@@ -11,7 +11,14 @@ public class DeadCell extends Cell {
 
     @Override
     public Cell getNextGeneration(World world) {
-        return null;
+
+        int aliveNeighbourCount = getAliveNeighbourCount(world);
+        if(aliveNeighbourCount == 3) {
+            return new LiveCell(location);
+        } else {
+            return this;
+        }
+
     }
 
     @Override

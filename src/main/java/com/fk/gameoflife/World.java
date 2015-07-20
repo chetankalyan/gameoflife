@@ -36,7 +36,14 @@ public class World {
     }
 
     public String getPattern() {
-        return null;
+        String pattern = "";
+        for (int i =0; i<maxRow; i++){
+            for(int j=0; j<maxCol; j++){
+                pattern += this.cells[i][j].toString();
+            }
+            pattern += "\n";
+        }
+        return pattern;
     }
 
     public boolean isAliveAt(int x, int y) {
@@ -63,5 +70,10 @@ public class World {
     public int getAliveNeighbourCount(int x, int y) {
         Cell cell = this.cells[x][y];
         return cell.getAliveNeighbourCount(this);
+    }
+
+    @Override
+    public String toString() {
+        return this.getPattern();
     }
 }

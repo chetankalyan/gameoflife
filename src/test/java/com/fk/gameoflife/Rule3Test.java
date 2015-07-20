@@ -13,9 +13,11 @@ public class Rule3Test {
                 "***",
                 ".*."});
         // T = 0
-        assertTrue(world.isAliveAt(1,1));
+        assertTrue(world.isAliveAt(1, 1));
+        System.out.println(world.toString());
         // T = 1
         world.tick();
+        System.out.println(world.toString());
         assertFalse(world.isAliveAt(1, 1));
     }
 }
