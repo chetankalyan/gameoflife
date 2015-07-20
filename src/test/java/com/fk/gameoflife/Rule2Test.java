@@ -37,4 +37,3 @@ public class Rule2Test {
         assertTrue(world.isAliveAt(1,1));
     }
 }
-}
