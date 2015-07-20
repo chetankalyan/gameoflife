@@ -5,9 +5,12 @@ import org.junit.Test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+/**
+ * Created by chetan.k on 7/20/15.
+ */
 public class Rule4Test {
     @Test
-    public void testBornRuleForExactly3AliveNeighbours(){
+    public void testBornRuleForExactly3AliveNeighbours() throws Exception {
         World world = new World(new String[]{
                 ".....",
                 "..*..",
@@ -22,7 +25,7 @@ public class Rule4Test {
     }
 
     @Test
-    public void testBornRuleNotAppliedForMoreThan3AliveNeighbours(){
+    public void testBornRuleNotAppliedForMoreThan3AliveNeighbours() throws Exception {
         World world = new World(new String[]{
                 ".....",
                 "..*..",

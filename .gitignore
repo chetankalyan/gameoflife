@@ -12,5 +12,15 @@
 hs_err_pid*
 .idea
 target/
+<<<<<<< HEAD
 *.i*
 .DS_Store
+=======
+
+# Intellij Idea
+#
+.idea
+*.iml
+*.ipr
+*.iws
+>>>>>>> dormantCells

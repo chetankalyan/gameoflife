@@ -2,10 +2,14 @@ package com.fk.gameoflife;
 
 import java.util.List;
 
-public class World {
-
+/**
+ * World was created using a seed pattern before.
+ * Now world needs to implement the GameWorld interface.
+ */
+public class World implements GameWorld<Cell> {
     private final int maxRow;
     private final int maxCol;
+
     private Cell[][] cells;
 
     public World(String[] seedPattern) {
@@ -26,8 +30,8 @@ public class World {
 
     public void tick() {
         Cell[][] nextCells = new Cell[maxRow][maxCol];
-        for(int i=0; i<maxRow; i++){
-            for(int j=0; j<maxCol; j++){
+        for (int i = 0; i < maxRow; i++) {
+            for (int j = 0; j < maxCol; j++) {
                 Cell cell = this.cells[i][j];
                 nextCells[i][j] = cell.getNextGeneration(this);
             }
@@ -35,13 +39,15 @@ public class World {
         this.cells = nextCells;
     }
 
-    public String getPattern() {
-        String pattern = "";
-        for (int i =0; i<maxRow; i++){
-            for(int j=0; j<maxCol; j++){
-                pattern += this.cells[i][j].toString();
+    public String[] getPattern() {
+        String[] pattern = new String[maxRow];
+        for (int i = 0; i < maxRow; i++) {
+            StringBuilder row = new StringBuilder();
+            for (int j = 0; j < maxCol; j++) {
+                row.append(this.cells[i][j].toString());
             }
-            pattern += "\n";
+            row.append("\n");
+            pattern[i] = row.toString();
         }
         return pattern;
     }
@@ -70,10 +76,5 @@ public class World {
     public int getAliveNeighbourCount(int x, int y) {
         Cell cell = this.cells[x][y];
         return cell.getAliveNeighbourCount(this);
-    }
-
-    @Override
-    public String toString() {
-        return this.getPattern();
     }
 }

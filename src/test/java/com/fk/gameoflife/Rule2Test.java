@@ -4,10 +4,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
+/**
+ * Created by chetan.k on 7/20/15.
+ */
 public class Rule2Test {
     @Test
-    public void testStayAliveRuleWithExactly2Neighbours(){
-        World world = new World(new String[]{
+    public void testStayAliveRuleWithExactly2Neighbours() throws Exception {
+        GameWorld world = new World(new String[]{
                 ".....",
                 "..*..",
                 "..*..",
@@ -21,8 +24,8 @@ public class Rule2Test {
     }
 
     @Test
-    public void testStayAliveRuleWithExactly3Neighbours(){
-        World world = new World(new String[]{
+    public void testStayAliveRuleWithExactly3Neighbours() throws Exception {
+        GameWorld world = new World(new String[]{
                 "....",
                 ".**.",
                 ".**.",

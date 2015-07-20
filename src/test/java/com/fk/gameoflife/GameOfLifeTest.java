@@ -1,34 +1,42 @@
 package com.fk.gameoflife;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class GameOfLifeTest {
+    String[] startPattern = new String[]{
+            ".....",
+            "..*..",
+            "..*..",
+            "..*..",
+            "....."
+    };
+    String[] endPattern = new String[] {
+            ".....",
+            ".....",
+            ".***.",
+            ".....",
+            "....."
+    };
     @Test
-    public void testOscillatorPattern(){
-        World world = new World(new String[]{
-                ".....",
-                "..*..",
-                "..*..",
-                "..*..",
-                "....."});
+    public void testOscillatorPattern() throws Exception {
+        World world = new World(startPattern);
         // T = 1
         world.tick();
-        assertEquals(
-                ".....\n"+
-                ".....\n"+
-                ".***.\n"+
-                ".....\n"+
-                ".....\n", world.getPattern());
+        String[] pattern = world.getPattern();
+        assertEquals(endPattern.length, pattern.length);
+        for (int i = 0; i < pattern.length; i++) {
+            pattern[i] = pattern[i].trim();
+            assertEquals(endPattern[i], pattern[i]);
+        }
         // T = 2
         world.tick();
-        assertEquals(
-                ".....\n"+
-                "..*..\n"+
-                "..*..\n"+
-                "..*..\n"+
-                ".....\n", world.getPattern());
+        pattern = world.getPattern();
+        assertEquals(startPattern.length, pattern.length);
+        for (int i = 0; i < pattern.length; i++) {
+            pattern[i] = pattern[i].trim();
+            assertEquals(startPattern[i], pattern[i]);
+        }
     }
 }
